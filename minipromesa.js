@@ -80,17 +80,17 @@ let getSalario = (empleado) => {
 
 
 
-getEmpleado(3).then(empleado => {
+getEmpleado(1).then(empleado => {
     // // console.log(result);
     // getSalario(empleado).then(resp => {
     //     console.log(`EL SALARIO ES ${resp.nombre} es de ${resp.salario}`);
     // }, err => console.log(err));
 
-
     //encadenar promesas 
- return getSalario(empleado)
-// }, err => console.log(err));
-}).then(resp=>){
+    return getSalario(empleado);
+    // }, err => console.log(err));
+}).then(resp => {
 
+    console.log(`${resp.nombre} ${resp.salario}`);
 
-};
+}).catch(err => { console.log(err) });
