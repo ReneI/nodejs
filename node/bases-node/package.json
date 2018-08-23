@@ -1,0 +1,15 @@
+{
+    "name": "comandosbases",
+    "version": "1.0.0",
+    "description": "Aplicacion de linea de comandos",
+    "main": "app2.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Rene ibarra",
+    "license": "ISC",
+    "dependencies": {
+        "yargs": "^12.0.1"
+    },
+    "devDependencies": {}
+}
