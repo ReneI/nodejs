@@ -22,7 +22,27 @@ const argv = require('yargs')
 const { crearArchivo } = require('./multiplicar/mul.js');
 
 
+let comando = argv._[0];
+
+switch (comando) {
+    case 'crear':
+        console.log('crear');
+        crearArchivo(argv.base)
+            .then(archivo => console.log(`Archivos creado ${archivo}`))
+            .catch(e => { console.log(e) });
+        break;
+
+    case 'listar':
+        console.log('lista');
+
+        break;
+    default:
+        break;
+}
+
 let argv2 = process.argv;
+
+
 
 console.log(argv);
 console.log('limite', argv.limite);
