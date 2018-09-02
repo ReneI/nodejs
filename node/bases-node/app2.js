@@ -1,45 +1,7 @@
 // requiereds 
-const argv = require('yargs')
-    .command('listar', 'Imprime en consoa la tabla', {
-
-        base: {
+const argv = require('./config/yargs').argv;
 
 
-            demand: true,
-            alias: 'b'
-        },
-
-        limite: {
-
-            default: 10,
-            alias: 'l'
-
-        }
-
-
-    })
-
-.command('crear', 'Crea un archivo txt en consoa la tabla', {
-
-    base: {
-
-
-        demand: true,
-        alias: 'b'
-    },
-
-    limite: {
-
-        default: 10,
-        alias: 'l'
-
-    }
-
-
-})
-
-.help()
-    .argv;
 const {
     crearArchivo,
     listar
