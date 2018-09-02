@@ -6,7 +6,7 @@ let listar = (base, limite = 10) => {
 
     return new Promise((resolve, reject) => {
             if (!Number(base)) {
-                reject('No es un numero')
+                reject(`No es un numero ${ base }`)
                 return;
             }
             let data = '';
@@ -24,7 +24,7 @@ let listar = (base, limite = 10) => {
     )
 
 };
-let crearArchivo = (base) => {
+let crearArchivo = (base, limite = 10) => {
     return new Promise((resolve, reject) => {
             if (!Number(base)) {
                 reject('No es un numero')

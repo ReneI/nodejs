@@ -17,7 +17,28 @@ const argv = require('yargs')
         }
 
 
-    }).help()
+    })
+
+.command('crear', 'Crea un archivo txt en consoa la tabla', {
+
+    base: {
+
+
+        demand: true,
+        alias: 'b'
+    },
+
+    limite: {
+
+        default: 10,
+        alias: 'l'
+
+    }
+
+
+})
+
+.help()
     .argv;
 const {
     crearArchivo,
@@ -30,7 +51,7 @@ let comando = argv._[0];
 switch (comando) {
     case 'crear':
         console.log('crear');
-        crearArchivo(argv.base)
+        crearArchivo(argv.base, argv.limite)
             .then(archivo => console.log(`Archivos creado ${archivo}`))
             .catch(e => { console.log(e) });
         break;
