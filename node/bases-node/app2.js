@@ -1,5 +1,6 @@
 // requiereds 
 const argv = require('./config/yargs').argv;
+var colors = require('colors');
 
 
 const {
@@ -13,13 +14,15 @@ let comando = argv._[0];
 switch (comando) {
     case 'crear':
         console.log('crear');
+
         crearArchivo(argv.base, argv.limite)
             .then(archivo => console.log(`Archivos creado ${archivo}`))
             .catch(e => { console.log(e) });
         break;
 
     case 'listar':
-        console.log('lista');
+        console.log('listar'.underline.red) // outputs red underlined text
+
         listar(argv.base, argv.limite)
             .then(archivo => console.log(`Archivos creado ${archivo}`))
             .catch(e => { console.log(e) });
